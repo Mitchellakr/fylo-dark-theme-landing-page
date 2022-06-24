@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+body {
+    background-color: hsl(216, 44%, 19%);
+    font-family: 'Raleway', sans-serif;
+}
+
+//subscription style
+
+.valid {
+    color: green;
+    font-size: 16px;
+}
+
+.invalid {
+    color: red;
+    font-size: 16px;
+}
+
+.valid-email {
+    border-radius: 0.5em;
+    border: 2px solid green;
+    color: green;
+}
+
+.invalid-email {
+    border-radius: 0.5em;
+    border: 2px solid rgb(255, 0, 0);
+    color: red;
+}
+
+//subscribe style ends 
+
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.wrapper {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.primary-btn {
+    padding: .5em 3em;
+    border-radius: 50px;
+    color: white;
+    background-color: hsl(176, 68%, 64%);
+    cursor: pointer;
+}
+
+// this is the header section
+
+header {
+    padding: 2em 0;
+}
+
+.header-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    ul {
+        display: flex;
+
+        li {
+            margin: .5em;
+
+            a {
+                color: white;
+                padding: .5em;
+                position: relative;
+
+
+                &::before {
+                    content: "";
+                    background-color: white;
+                    width: 0px;
+                    border-radius: 10px;
+                    bottom: 0;
+                    left: 0;
+                    position: absolute;
+                    height: 3px;
+                    transition: all .3s ease;
+                }
+
+                &:hover::before {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+// this is the hero-section
+
+.hero-section {
+    position: relative;
+
+    .hero-bg {
+        position: absolute;
+        bottom: -1px;
+        z-index: -1;
+        width: 100%;
+    }
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+    color: white;
+    line-height: 1.5em;
+    padding: 2em 0 7em;
+
+    p {
+        padding: .5em 0;
+    }
+
+    img {
+        width: 100%;
+        padding: 2em 0;
+    }
+}
+
+// this is the second section
+
+.second-section {
+    background-color: hsl(218, 28%, 13%);
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    text-align: center;
+    color: white;
+    gap: 4em;
+    padding: 2em 0;
+    line-height: 1.5em;
+
+    h2 {
+        padding: .5em 0;
+    }
+}
+
+// this is the third section
+
+.third-section {
+    background-color: hsl(218, 28%, 13%);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 4em;
+    padding: 6em 0;
+    color: white;
+    line-height: 1.5em;
+
+    .illustration {
+        width: 100%;
+    }
+
+    h2 {
+        line-height: 1.3em;
+    }
+
+    .stay-safe h2,
+    p {
+        padding: .5em 0;
+    }
+
+    .link {
+        display: flex;
+        align-items: center;
+
+        a {
+            color: hsl(176, 68%, 64%);
+            padding-right: .5em;
+            border-bottom: 2px solid hsl(176, 68%, 64%);
+        }
+
+        img {
+            padding: .25em 0;
+            border-bottom: 2px solid hsl(176, 68%, 64%);
+        }
+    }
+}
+
+// this is the testimonial section
+
+
+.testimonial-section {
+    background-color: hsl(218, 28%, 13%);
+}
+
+.testimonial-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3em;
+    padding: 3em 0;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 1em;
+        left: -1em;
+        z-index: 1;
+        background-image: url(../images/bg-quotes.png);
+        background-repeat: no-repeat;
+        padding: 2em;
+
+    }
+
+    .card {
+        padding: 1.5em;
+        border-radius: 10px;
+        background-color: hsl(219, 30%, 18%);
+        color: white;
+        z-index: 2;
+
+        p {
+            padding-bottom: 1em;
+        }
+
+        .user {
+            display: flex;
+            align-items: center;
+
+            img {
+                border-radius: 50%;
+                width: 30px;
+            }
+
+            .name {
+                padding-left: 1em;
+            }
+        }
+    }
+}
+
+// access card section
+
+.access-card-section {
+    background-color: hsl(218, 28%, 13%);
+    padding: 10em 0;
+}
+
+.access-card {
+    color: white;
+    padding: 2em;
+    text-align: center;
+    border-radius: 10px;
+    background-color: hsl(219, 30%, 18%);
+    position: relative;
+
+    p {
+        padding: 1em 0;
+        line-height: 1.5;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 1em;
+        gap: 1em;
+
+        input[type="email"] {
+            border-radius: 50px;
+            width: 100%;
+            padding: .5em 1.2em;
+        }
+    }
+}
+
+// this is the footer section
+
+footer {
+    margin-top: -17em;
+    padding: 15em 0 6em;
+    background-color: hsl(216, 53%, 9%);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2em;
+    color: white;
+    line-height: 1.5;
+    padding: 2em 0;
+
+    &:last-child ul li a {
+        color: white;
+    }
+}
+
+.footer-content>div:first-child {
+    display: grid;
+    grid-template-columns: .05fr 1fr;
+    grid-column: 1/3;
+    align-items: flex-start;
+    gap: 1em;
+}
+
+.contact-medium>div {
+    display: flex;
+    gap: 1em;
+    padding-bottom: 1em;
+    align-items: center;
+}
+
+// this is the media query section
+
+@media only screen and (max-width:768px) {
+    .container {
+        width: 90%;
+    }
+
+    .wrapper {
+        width: 90%;
+    }
+
+    .header-section .header-logo {
+        width: 100px;
+    }
+
+    .row {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        line-height: 1.5;
+    }
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content>div:first-child {
+        grid-column: 1;
+    }
+
+    .access-card-section .wrapper .access-card .form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .access-card-section .wrapper .access-card .form input[type="submit"] {
+        width: 70%;
+        align-self: center;
+    }
+}
