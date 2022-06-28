@@ -280,6 +280,7 @@ header {
         display: flex;
         flex-direction: row;
         justify-content: center;
+        align-items: center;
         padding: 1em;
         gap: 1em;
 
@@ -287,6 +288,12 @@ header {
             border-radius: 50px;
             width: 100%;
             padding: .5em 1.2em;
+        }
+
+        input[type="submit"] {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
         }
     }
 }
